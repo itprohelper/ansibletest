@@ -6,13 +6,11 @@
 
 - hosts: webserver
   gather_facts: yes
-# become: true
   roles:
   - webserver
 
 - hosts: appserver
   gather_facts: yes
-# become: true
   roles:
   - appserver
 
