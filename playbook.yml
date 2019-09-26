@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: yes
+  roles:
+  - basic
+
+- hosts: webserver
+  gather_facts: yes
+# become: true
+  roles:
+  - webserver
+
+- hosts: appserver
+  gather_facts: yes
+# become: true
+  roles:
+  - appserver
+
+- hosts: dbserver
+  gather_facts: yes
+  roles:
+  - dbserver

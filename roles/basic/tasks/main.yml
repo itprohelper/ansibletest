@@ -1,0 +1,14 @@
+- name: "Installing additional software"
+  apt: pkg={{ item }} state=present
+  with_items:
+  - dnsutils
+  - git
+  - vim
+  - ntp
+  - at
+  - lvm2
+
+- name: "Adding a file"
+  copy: src=testfile dest=/home/root owner=root group=root mode=0644
+
+
